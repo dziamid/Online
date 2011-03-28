@@ -1,3 +1,17 @@
 all:
   sf_guard_plugin:
     routes_register: false
+
+  sfApplyPlugin:
+    from:
+      email: "belgim.ovs@gmail.com"
+      fullname: "belgim.by"
+
+  sfForkedApply:
+    routes:
+      apply: /user/new
+      reset: /user/password-reset
+      resetRequest: /user/reset-request
+      resetCancel: /user/reset-cancel
+      validate: /user/confirm/:validate
+      settings: /user/settings
