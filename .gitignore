@@ -1,5 +1,6 @@
 syntax: glob
 
+config/databases.yml
 cache/*
 log/*
 data/sql/*
