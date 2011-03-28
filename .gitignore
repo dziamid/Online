@@ -1,0 +1,8 @@
+syntax: glob
+
+cache/*
+log/*
+data/sql/*
+
+*.komodoproject
+*.kpf
