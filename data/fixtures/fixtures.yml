@@ -1,20 +1,37 @@
 sfGuardUser:
   User_admin:
-    first_name:     Dziamid
-    last_name:      Zayankouski
     email_address:  dziamid@gmail.com
     username:       dziamid
     password:       demo
-    is_super_admin: true
+    is_super_admin: false
     Groups:         [Group_admin]
+    Profile:
+      firstname:     Dziamid
+      lastname:      Zayankouski
+  User_client:
+    email_address:  belgim.ovs@gmail.com
+    username:       belgim.ovs
+    password:       demo
+    is_super_admin: false
+    Groups:         [Group_client]
+    Profile:
+      firstname:     Dziamid
+      lastname:      Zayankouski  
 
 sfGuardGroup:
   Group_admin:
     name:           admin
-    description:    Administrator group
+    description:    Administrators group
     Permissions:    [Permission_admin]
+  Group_client:
+    name:           client
+    description:    Clients group
+    Permissions:    [Permission_client]
 
 sfGuardPermission:
   Permission_admin:
     name:           admin
     description:    Administrator permission
+  Permission_client:
+    name:           client
+    description:    Clients permission
