@@ -43,4 +43,5 @@ all:
     secure_action:          secure
     
     i18n:                   true
+    default_culture:        ru_RU
 
