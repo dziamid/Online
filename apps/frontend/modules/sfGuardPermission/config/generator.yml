@@ -12,7 +12,8 @@ generator:
 
     config:
       list:
-        title: Permission list
+        #title overriden in indexSuccess
+        title: Permissions list
         display: [=name, description, created_at, updated_at]
 
       edit:
@@ -22,4 +23,4 @@ generator:
         title: New Permission
 
       form:
-        display: [name, description, groups_list, users_list]
+        display: [name, description, groups_list]

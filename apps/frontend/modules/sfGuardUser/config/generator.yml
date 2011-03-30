@@ -9,7 +9,7 @@ generator:
     plural:                ~
     route_prefix:          sf_guard_user
     with_doctrine_route:   true
-
+    
     config:
       fields:
         password_again: { label: "Password (again)" }
@@ -19,10 +19,10 @@ generator:
         display: [=username, created_at, updated_at, last_login]
 
       form:
-        class: sfGuardUserAdminForm
+        class: sfGuardUserForm
         display:
-          "User":                   [first_name, last_name, email_address, username, password, password_again]
-          "Permissions and groups": [is_active, is_super_admin, groups_list, permissions_list]
+          "User":                   [email_address, username, password, password_again]
+          "Permissions and groups": [is_active, is_super_admin, groups_list]
 
       edit:
         title: Editing User "%%username%%"

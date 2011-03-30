@@ -12,5 +12,8 @@ class sfGuardPermissionForm extends PluginsfGuardPermissionForm
 {
   public function configure()
   {
+    $this->useFields(array('name', 'description', 'groups_list'));
+
+    $this->getWidget('groups_list')->setOption('expanded', true);
   }
 }

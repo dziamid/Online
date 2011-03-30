@@ -12,11 +12,12 @@ generator:
 
     config:
       list:
-        title: Group list
+        #title overriden in indexSuccess
+        title: Groups list
         display: [=name, description, created_at, updated_at]
 
       form:
-        display: [name, description, users_list, permissions_list]
+        display: [name, description, permissions_list]
 
       edit:
         title: Editing Group "%%name%%"

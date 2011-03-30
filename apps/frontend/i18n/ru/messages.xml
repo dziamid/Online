@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <header/>
+    <body>
+      <trans-unit>
+        <source>Username</source>
+        <target>Логин</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Password</source>
+        <target>Пароль</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Password (again)</source>
+        <target>Пароль (повторно)</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Remember</source>
+        <target>Запомнить меня</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Signin</source>
+        <target>Вход</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Forgot your password?</source>
+        <target>Забыли пароль?</target>
+      </trans-unit>
+      <trans-unit>
+        <source>You don't have the required permission to access this page.</source>
+        <target>У вас нет прав на просмотр данной страницы.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Is active</source>
+        <target>Активный?</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Is super admin</source>
+        <target>Главный администатор?</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Groups</source>
+        <target>Список групп</target>
+      </trans-unit>
+      <trans-unit>
+        <source>New Group</source>
+        <target>Новая группа</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Groups list</source>
+        <target>Список групп</target>
+      </trans-unit>
+      <trans-unit>
+        <source>User</source>
+        <target>Основные настройки</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Permissions and groups</source>
+        <target>Группы и привилегии</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Permissions</source>
+        <target>Привилегии</target>
+      </trans-unit>
+      <trans-unit>
+        <source>New Permission</source>
+        <target>Новая привилегия</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Permissions list</source>
+        <target>Список привилегий</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Created at</source>
+        <target>Дата создания</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Updated at</source>
+        <target>Дата обновления</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Description</source>
+        <target>Описание</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Name</source>
+        <target>Название</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Editing Permission "%%name%%"</source>
+        <target>Редактирование привилегии "%%name%%"</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Editing Group "%%name%%"</source>
+        <target>Редактирование группы "%%name%%"</target>
+      </trans-unit>
+      
+    </body>
+  </file>
+</xliff>
