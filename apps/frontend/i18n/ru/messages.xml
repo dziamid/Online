@@ -5,6 +5,14 @@
     <header/>
     <body>
       <trans-unit>
+        <source>First name</source>
+        <target>Имя</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Last name</source>
+        <target>Фамилия</target>
+      </trans-unit>
+      <trans-unit>
         <source>Username</source>
         <target>Логин</target>
       </trans-unit>
@@ -14,6 +22,10 @@
       </trans-unit>
       <trans-unit>
         <source>Password (again)</source>
+        <target>Пароль (повторно)</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Password again</source>
         <target>Пароль (повторно)</target>
       </trans-unit>
       <trans-unit>
@@ -45,8 +57,16 @@
         <target>Список групп</target>
       </trans-unit>
       <trans-unit>
+        <source>User list</source>
+        <target>Список пользователей</target>
+      </trans-unit>
+      <trans-unit>
         <source>New Group</source>
         <target>Новая группа</target>
+      </trans-unit>
+      <trans-unit>
+        <source>New User</source>
+        <target>Новый пользователь</target>
       </trans-unit>
       <trans-unit>
         <source>Groups list</source>
@@ -96,7 +116,10 @@
         <source>Editing Group "%%name%%"</source>
         <target>Редактирование группы "%%name%%"</target>
       </trans-unit>
-      
+      <trans-unit>
+        <source>Editing User "%%username%%"</source>
+        <target>Редактирование пользователя "%%username%%"</target>
+      </trans-unit>      
     </body>
   </file>
 </xliff>

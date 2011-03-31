@@ -11,8 +11,7 @@ generator:
     with_doctrine_route:   true
     
     config:
-      fields:
-        password_again: { label: "Password (again)" }
+      fields: ~
 
       list:
         title:   User list
@@ -21,7 +20,7 @@ generator:
       form:
         class: sfGuardUserForm
         display:
-          "User":                   [email_address, username, password, password_again]
+          "User":                   [first_name, last_name, email_address, username, _password]
           "Permissions and groups": [is_active, is_super_admin, groups_list]
 
       edit:

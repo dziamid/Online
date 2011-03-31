@@ -6,6 +6,8 @@ sfGuardUser:
     is_super_admin: true
     first_name:     Super
     last_name:      Admin
+    Profile:
+      id: ~
   User_admin:
     email_address:  dziamid@gmail.com
     username:       dziamid
@@ -14,6 +16,8 @@ sfGuardUser:
     first_name:     Dziamid
     last_name:      Zayankouski
     Groups:         [Group_admin]
+    Profile:
+      id: ~
   User_client:
     email_address:  belgim.ovs@gmail.com
     username:       belgim.ovs
@@ -22,6 +26,8 @@ sfGuardUser:
     password:       demo
     is_super_admin: false
     Groups:         [Group_client]
+    Profile:
+      id: ~
 
 sfGuardGroup:
   Group_admin:

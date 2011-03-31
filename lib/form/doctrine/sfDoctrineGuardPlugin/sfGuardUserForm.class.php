@@ -18,10 +18,17 @@ class sfGuardUserForm extends PluginsfGuardUserForm
     $this->validatorSchema['password_again'] = clone $this->validatorSchema['password'];
     $this->mergePostValidator(new sfValidatorSchemaCompare('password', sfValidatorSchemaCompare::EQUAL, 'password_again', array(), array('invalid' => 'The two passwords must be the same.')));
 
-    $this->useFields(array('email_address','username','password', 'password_again', 'is_active', 'is_super_admin', 'groups_list'));
+    $this->useFields(array('first_name', 'last_name', 'email_address','username','password', 'password_again', 'is_active', 'is_super_admin', 'groups_list'));
   
     //groups_list
     $this->getWidget('groups_list')->setOption('expanded', true);
+    
+  }
+  public function doSave($con = null)
+  {
+    $profile = new sfGuardUserProfile();
+    $this->getObject()->setProfile($profile);
 
+    return parent::doSave($con);
   }
 }
