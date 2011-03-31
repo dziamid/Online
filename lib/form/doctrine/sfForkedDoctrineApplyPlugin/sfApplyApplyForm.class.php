@@ -96,6 +96,8 @@ class sfApplyApplyForm extends sfGuardUserProfileForm
         $user->setUsername($this->getValue('username'));
         $user->setPassword($this->getValue('password'));
         $user->setEmailAddress( $this->getValue('email') );
+        $user->setFirstName($this->getValue('firstname'));
+        $user->setLastName($this->getValue('lastname'));
         // They must confirm their account first
         $user->setIsActive(false);
         $user->save();

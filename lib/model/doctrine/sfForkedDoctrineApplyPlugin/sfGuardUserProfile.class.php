@@ -12,4 +12,17 @@
  */
 class sfGuardUserProfile extends PluginsfGuardUserProfile
 {
+  public function  __toString()
+  {
+    return $this->getUser()->__toString();
+  }
+  /**
+   * Returns joind firstname and lastname as fullname.
+   * @return string
+   * @author fizyk
+   */
+  public function getFullname()
+  {
+    return $this->getUser()->getFullname();
+  }
 }

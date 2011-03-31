@@ -1,22 +1,27 @@
 sfGuardUser:
+  User_super:
+    email_address:  super@gmail.com
+    username:       super
+    password:       demo
+    is_super_admin: true
+    first_name:     Super
+    last_name:      Admin
   User_admin:
     email_address:  dziamid@gmail.com
     username:       dziamid
     password:       demo
     is_super_admin: false
+    first_name:     Dziamid
+    last_name:      Zayankouski
     Groups:         [Group_admin]
-    Profile:
-      firstname:     Dziamid
-      lastname:      Zayankouski
   User_client:
     email_address:  belgim.ovs@gmail.com
     username:       belgim.ovs
+    first_name:     Belgim
+    last_name:      Ovs
     password:       demo
     is_super_admin: false
     Groups:         [Group_client]
-    Profile:
-      firstname:     Dziamid
-      lastname:      Zayankouski  
 
 sfGuardGroup:
   Group_admin:

@@ -12,4 +12,27 @@
  */
 class sfGuardUser extends PluginsfGuardUser
 {
+  /**
+   * String representation of a sfGuardUser object
+   */
+  public function  __toString()
+  {
+    if($this->getFirstName() !== null || $this->getLastName() !== null)
+    {
+      return $this->getFullname();
+    }
+    else
+    {
+      return $this->getUsername();
+    }
+  }
+  /**
+   * Returns joined first_name and last_name as fullname.
+   * 
+   * @return string
+   */
+  public function getFullname()
+  {
+    return trim($this->getFirstName().' '.$this->getLastName());
+  }
 }

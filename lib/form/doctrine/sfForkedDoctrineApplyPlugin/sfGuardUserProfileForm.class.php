@@ -10,7 +10,4 @@
  */
 class sfGuardUserProfileForm extends PluginsfGuardUserProfileForm
 {
-  public function configure()
-  {
-  }
 }

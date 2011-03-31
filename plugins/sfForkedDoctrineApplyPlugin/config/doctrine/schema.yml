@@ -9,10 +9,10 @@ sfGuardUserProfile:
     email_new:
       type: string(255)
       unique: true
-    firstname:
-      type: string(255)
-    lastname:
-      type: string(255)
+    #firstname:
+    #  type: string(255)
+    #lastname:
+    #  type: string(255)
     validate_at:
       type: timestamp
     validate:
