@@ -59,3 +59,7 @@ all:
           username: belgim.ovs@gmail.com
           password: hikdziamid
 
+  user:
+    param:
+      #set's authentication timeout for 1 day
+      timeout:                    86400
