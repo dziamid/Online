@@ -1,3 +1,9 @@
+comment:
+  class: sfDoctrineRouteCollection
+  options:
+    module: comment
+    model: Comment
+    
 file:
   class: sfDoctrineRouteCollection
   options:
