@@ -1,3 +1,8 @@
+file:
+  class: sfDoctrineRouteCollection
+  options:
+    module: file
+    model: File
 
 #sfDoctrineGuardPlugin
 sf_guard_signin:
