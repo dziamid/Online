@@ -1,0 +1,19 @@
+File:
+  columns:
+    name: string(255)
+    
+Comment:
+  actAs:
+    NestedSet:
+      hasManyRoots: true
+      
+  columns:
+    username: string(255)
+    file_id: integer
+    root_id: integer
+    message: string(1020)
+  relations:
+    File:
+      local: file_id
+      foreign: id
+      foreignAlias: Comments
