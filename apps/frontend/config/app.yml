@@ -20,3 +20,5 @@ all:
       resetCancel: /user/reset-cancel
       validate: /user/confirm/:validate
       settings: /user/settings
+      
+  reply_level_limit: 3
