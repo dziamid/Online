@@ -12,3 +12,15 @@
 #sf_admin_container label {
   width: 14em;
 }
+
+/* comments */
+a, span.link
+{
+  color: #524F46;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover, span.link:hover {
+  color: black;
+}
