@@ -13,7 +13,7 @@ abstract class BaseCommentFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'username' => new sfWidgetFormFilterInput(),
+      'username' => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'file_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('File'), 'add_empty' => true)),
       'root_id'  => new sfWidgetFormFilterInput(),
       'message'  => new sfWidgetFormFilterInput(array('with_empty' => false)),

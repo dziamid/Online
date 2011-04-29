@@ -32,9 +32,10 @@ abstract class BaseComment extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('comment');
-        $this->hasColumn('username', 'string', 255, array(
+        $this->hasColumn('username', 'string', 30, array(
              'type' => 'string',
-             'length' => 255,
+             'notnull' => true,
+             'length' => 30,
              ));
         $this->hasColumn('file_id', 'integer', null, array(
              'type' => 'integer',

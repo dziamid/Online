@@ -8,7 +8,9 @@ Comment:
       hasManyRoots: true
       
   columns:
-    username: string(255)
+    username:
+      type: string(30)
+      notnull: true
     file_id: integer
     root_id: integer
     message:

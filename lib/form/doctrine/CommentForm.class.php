@@ -18,11 +18,21 @@ class CommentForm extends BaseCommentForm
       'required' => false,
     )));
     
-    $this->useFields(array(
-      'username',
-      'message',
-      'parent_id',
-    ));
+    if (sfContext::getInstance()->getUser()->isAuthenticated())
+    {
+      $this->useFields(array(
+        'message',
+        'parent_id',
+      ));      
+    }
+    else
+    {
+      $this->useFields(array(
+        'username',
+        'message',
+        'parent_id',
+      ));
+    }
   }
   /**
    * Updates and saves the current object. Overrides the parent method
@@ -33,6 +43,10 @@ class CommentForm extends BaseCommentForm
    */
   public function doSave($con = null)
   {
+    if (sfContext::getInstance()->getUser()->isAuthenticated())
+    {
+      $this->getObject()->username = sfContext::getInstance()->getUser()->getUsername();  
+    }
     // save the record itself
     parent::doSave($con);
     // if a parent has been specified, add/move this node to be the child of that node
