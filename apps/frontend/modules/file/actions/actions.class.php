@@ -17,9 +17,13 @@ class fileActions extends sfActions
 
   public function executeShow(sfWebRequest $request)
   {
-    //$this->file = Doctrine::getTable('File')->getForShow($request->getParameter('id'));
     $this->file = $this->getRoute()->getObject();
     $this->comments = Doctrine::getTable('Comment')->getTreeForFile($this->file->getId());
+
+    $comment = new Comment();
+    $comment->File = $this->file;
+    $this->form = new CommentForm($comment);
+
   }
 
   public function executeNew(sfWebRequest $request)
@@ -64,9 +68,25 @@ class fileActions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
-      $file = $form->save();
+      $obj = $form->save();
+      
+      $file = $obj instanceof File ? $obj : $obj->getFile();
 
-      $this->redirect('@file_edit?id='.$file->getId());
+      $this->redirect('file_show', $file);
     }
+  }
+
+  public function executeComment(sfWebRequest $request)
+  {
+    $this->file = $this->getRoute()->getObject();
+    $this->comments = Doctrine::getTable('Comment')->getTreeForFile($this->file->getId());
+    
+    $comment = new Comment();
+    $comment->File = $this->file;
+    $this->form = new CommentForm($comment);
+
+    $this->processForm($request, $this->form);
+
+    $this->setTemplate('show');
   }
 }

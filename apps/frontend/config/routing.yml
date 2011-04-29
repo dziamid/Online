@@ -9,6 +9,7 @@ file:
   options:
     module: file
     model: File
+    object_actions: {comment: post}
 
 #sfDoctrineGuardPlugin
 sf_guard_signin:
