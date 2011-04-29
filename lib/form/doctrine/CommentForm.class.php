@@ -12,6 +12,7 @@ class CommentForm extends BaseCommentForm
 {
   public function configure()
   {
+    $this->getWidgetSchema()->setFormFormatterName('list');
     $this->setWidget('parent_id', new sfWidgetFormInputHidden());
     $this->setValidator('parent_id', new sfValidatorDoctrineChoice(array(
       'model' => 'Comment',

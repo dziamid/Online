@@ -119,7 +119,23 @@
       <trans-unit>
         <source>Editing User "%%username%%"</source>
         <target>Редактирование пользователя "%%username%%"</target>
-      </trans-unit>      
+      </trans-unit>
+      <trans-unit>
+        <source>Save</source>
+        <target>Отправить</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Comments on this file</source>
+        <target>Комментарии к этому файлу</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Your comment</source>
+        <target>Ваш комментарий</target>
+      </trans-unit>
+      <trans-unit>
+        <source>reply</source>
+        <target>ответить</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

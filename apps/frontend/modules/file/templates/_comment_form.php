@@ -2,16 +2,15 @@
 <?php use_javascripts_for_form($form) ?>
 
 <form action="<?php echo url_for('file_comment', $file) ?>" method="post">
-  <table>
-    <tfoot>
-      <tr>
-        <td colspan="2">
-          <input type="submit" value="Save" />
-        </td>
-      </tr>
-    </tfoot>
-    <tbody>
-      <?php echo $form ?>
-    </tbody>
-  </table>
+
+  <ul>
+    <li>
+      <?php echo $form['message']->render() ?>          
+    </li>
+    <?php if (isset($form['username'])): ?>
+      <?php echo $form['username']->renderRow() ?>
+    <?php endif; ?>
+  </ul>
+  <input type="submit" value="<?php echo __('Save') ?>" />
+  <?php echo $form->renderHiddenFields() ?>
 </form>

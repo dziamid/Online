@@ -44,4 +44,6 @@ all:
     
     i18n:                   true
     default_culture:        ru_RU
+    standard_helpers:       [Partial, I18N]
+
 

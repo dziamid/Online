@@ -1,3 +1,23 @@
+/*
+Reset CSS
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+html{color:#000;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}
+
+/*
+Fonts CSS
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;outline: none;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+/* admin generator css fixes */
+
 /* fix issue with container boarder crossing label text */
 #sf_admin_container,
 #sf_admin_container .sf_admin_form_row
@@ -14,13 +34,62 @@
 }
 
 /* comments */
+
 a, span.link
 {
-  color: #524F46;
   outline: none;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover, span.link:hover {
   color: black;
+  text-decoration: underline;
+}
+
+#comments {
+  background-color: #F2F2F2;
+  padding: 20px 14px;
+  width: 400px;
+}
+#comments .node .tree {
+  padding-left: 20px;
+}
+#comments  h3 {
+  color: #000000;
+  font-size: 1.4em;
+  padding: 0 0 7px;
+}
+#comments h4 {
+  float: left;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#comments .comment {
+  border-top: 1px solid #CCCCCC;
+  overflow: hidden;
+  padding: 8px 16px 5px 0;
+  position: relative;
+}
+
+#comments .comment .actions {
+  display: inline-block;
+  float: right;
+  font-size: 1.1em;
+  color: #FF9E9E;
+}
+
+#comments .comment .body {
+  clear: both;
+  font-size: 1em;
+  margin: 5px 30px 10px 0;
+  overflow-x: hidden;
+  padding: 5px 0 0;
+}
+
+#comments form textarea {
+  width: 100%;
+}
+#comments form input[type=text] {
+  width: 100%;
 }
