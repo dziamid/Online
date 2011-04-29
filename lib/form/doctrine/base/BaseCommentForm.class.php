@@ -30,7 +30,7 @@ abstract class BaseCommentForm extends BaseFormDoctrine
       'username' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'file_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('File'), 'required' => false)),
       'root_id'  => new sfValidatorInteger(array('required' => false)),
-      'message'  => new sfValidatorString(array('max_length' => 1020, 'required' => false)),
+      'message'  => new sfValidatorString(array('max_length' => 1020)),
       'lft'      => new sfValidatorInteger(array('required' => false)),
       'rgt'      => new sfValidatorInteger(array('required' => false)),
       'level'    => new sfValidatorInteger(array('required' => false)),

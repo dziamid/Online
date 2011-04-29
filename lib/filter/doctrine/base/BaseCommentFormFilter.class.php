@@ -16,7 +16,7 @@ abstract class BaseCommentFormFilter extends BaseFormFilterDoctrine
       'username' => new sfWidgetFormFilterInput(),
       'file_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('File'), 'add_empty' => true)),
       'root_id'  => new sfWidgetFormFilterInput(),
-      'message'  => new sfWidgetFormFilterInput(),
+      'message'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'lft'      => new sfWidgetFormFilterInput(),
       'rgt'      => new sfWidgetFormFilterInput(),
       'level'    => new sfWidgetFormFilterInput(),

@@ -11,7 +11,9 @@ Comment:
     username: string(255)
     file_id: integer
     root_id: integer
-    message: string(1020)
+    message:
+      type: string(1020)
+      notnull: true
   relations:
     File:
       local: file_id

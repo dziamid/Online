@@ -12,5 +12,57 @@ class CommentForm extends BaseCommentForm
 {
   public function configure()
   {
+    $this->setWidget('parent_id', new sfWidgetFormInputHidden());
+    $this->setValidator('parent_id', new sfValidatorDoctrineChoice(array(
+      'model' => 'Comment',
+      'required' => false,
+    )));
+    
+    $this->useFields(array(
+      'username',
+      'message',
+      'parent_id',
+    ));
   }
+  /**
+   * Updates and saves the current object. Overrides the parent method
+   * by treating the record as a node in the nested set and updating
+   * the tree accordingly.
+   *
+   * @param Doctrine_Connection $con An optional connection parameter
+   */
+  public function doSave($con = null)
+  {
+    // save the record itself
+    parent::doSave($con);
+    // if a parent has been specified, add/move this node to be the child of that node
+    if ($this->getValue('parent_id'))
+    {
+      $parent = $this->getObject()->getTable()->findOneById($this->getValue('parent_id'));
+
+      if ($this->isNew())
+      {
+        $this->getObject()->getNode()->insertAsLastChildOf($parent);
+      }
+      else
+      {
+        $this->getObject()->getNode()->moveAsLastChildOf($parent);
+      }
+    }
+    // if no parent was selected, add/move this node to be a new root in the tree
+    else
+    {
+      $tree = $this->getObject()->getTable()->getTree();
+
+      if ($this->isNew())
+      {
+        $tree->createRoot($this->getObject());
+      }
+      else
+      {
+        $this->getObject()->getNode()->makeRoot($this->getObject()->getId());
+      }
+    }
+  }
+
 }

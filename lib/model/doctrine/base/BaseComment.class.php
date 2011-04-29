@@ -44,6 +44,7 @@ abstract class BaseComment extends sfDoctrineRecord
              ));
         $this->hasColumn('message', 'string', 1020, array(
              'type' => 'string',
+             'notnull' => true,
              'length' => 1020,
              ));
     }
