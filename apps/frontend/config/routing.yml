@@ -1,3 +1,12 @@
+file_public:
+  class: sfDoctrineRouteCollection
+  options:
+    actions: [list]
+    model:                File
+    module:               filePublic
+    prefix_path:          /public
+    #with_wildcard_routes: true
+
 file_show:
   url:  /file/:id
   options:
@@ -12,7 +21,6 @@ file:
       comment: post
     with_wildcard_routes: true
     
-
 #sfDoctrineGuardPlugin
 sf_guard_signin:
   url:   /login
@@ -24,7 +32,7 @@ sf_guard_signout:
 
 homepage:
   url:   /
-  param: { module: home, action: index }
+  param: { module: filePublic, action: index }
 
 default_index:
   url:   /:module
