@@ -6,7 +6,6 @@
     <tfoot>
       <tr>
         <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('file') ?>">Back to list</a>
           <?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php echo link_to('Delete', 'file_delete', $form->getObject(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
           <?php endif; ?>

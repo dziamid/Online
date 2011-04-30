@@ -1,11 +1,4 @@
-<table>
-  <tbody>
-    <tr>
-      <th>Name:</th>
-      <td><?php echo $file->getName() ?></td>
-    </tr>
-  </tbody>
-</table>
+<h1><?php echo __('File "%%name%%"', array('%%name%%' => $file->getName())) ?></h1>
 
 <div id="comments">
   <h3><?php echo __('Comments on this file') ?></h3>

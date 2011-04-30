@@ -86,7 +86,7 @@
       </trans-unit>
       <trans-unit id="22" approved="yes">
         <source>The username and/or password is invalid.</source>
-        <target>Лоигн или пароль не верные.</target>
+        <target>Логин или пароль не верные.</target>
       </trans-unit>
       <trans-unit id="23" approved="yes">
         <source>Login</source>

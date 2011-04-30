@@ -17,6 +17,11 @@
         <target>Логин</target>
       </trans-unit>
       <trans-unit>
+        <source>Username or E-Mail</source>
+        <target>Логин или E-mail</target>
+      </trans-unit>
+      
+      <trans-unit>
         <source>Password</source>
         <target>Пароль</target>
       </trans-unit>
@@ -156,7 +161,22 @@
         <source>menu.signin</source>
         <target>Войти</target>
       </trans-unit>
-      
+      <trans-unit>
+        <source>file</source>
+        <target>Мои файлы</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>File "%%name%%"</source>
+        <target>Файл "%%name%%"</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>Files list</source>
+        <target>Мои файлы</target>
+      </trans-unit>      
+      <trans-unit>
+        <source>New file</source>
+        <target>Загрузить файл</target>
+      </trans-unit>
       
     </body>
   </file>

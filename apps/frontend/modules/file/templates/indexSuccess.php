@@ -1,4 +1,4 @@
-<h1>Files List</h1>
+<h1><?php echo __("Files list") ?></h1>
 
 <table>
   <thead>
@@ -17,4 +17,4 @@
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('file_new') ?>">New</a>
+  <a href="<?php echo url_for('file_new') ?>"><?php echo __('Upload file') ?></a>
