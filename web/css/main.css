@@ -33,6 +33,101 @@ body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-s
   width: 14em;
 }
 
+/* layout */
+
+a {
+  color: #524F46;
+  outline: none;
+}
+
+body {
+  font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
+  background-color:#DFEEF4;
+  min-width: 600px;
+}
+
+#container {
+  margin: 0 auto;
+}
+
+#header {
+  background: url(../images/bg-header.jpg) repeat-x top;
+}
+
+#header h1 {
+  height: 110px;
+  width: 950px;
+  margin: 0 auto;
+}
+
+#header h1 a {
+  font-size: 60px;
+  color: white;
+  line-height: 110px;
+  text-decoration: none;
+}
+
+#content {
+  width: 950px;
+  margin: 0 auto;
+}
+
+#content h1 {
+  margin: 10px 0;
+  padding: 0px 15px;
+  font-size: 124%;
+  text-transform: uppercase;
+  background: url(../images/bg-listheader.gif) no-repeat;
+  line-height: 32px;
+  color: #fff;
+}
+
+#content h1 a {
+  color: #fff;
+  text-decoration: none;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 32px;
+}
+
+#content td,
+#content th,
+#content li
+{
+  padding: 5px;
+}
+
+#content p
+{
+  margin: 5px;
+}
+
+#signin input[type=text],
+#signin input[type=password]
+{
+  width: 15em;
+}
+
+#menu {
+  padding: 10px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #aaa;
+  background-color: white;
+}
+
+#menu li {
+  margin-right: 15px;
+  display: inline;
+}
+#menu ul {
+  display: inline;
+}
+#menu ul.stick_right {
+  float: right;
+  color: #176F94;
+}
+
 /* comments */
 
 a, span.link

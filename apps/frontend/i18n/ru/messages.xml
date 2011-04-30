@@ -136,6 +136,28 @@
         <source>reply</source>
         <target>ответить</target>
       </trans-unit>
+      <trans-unit>
+        <source>homepage</source>
+        <target>Главная</target>
+      </trans-unit>
+      <trans-unit>
+        <source>file</source>
+        <target>Мои файлы</target>
+      </trans-unit>
+      <trans-unit>
+        <source>file_new</source>
+        <target>Загрузить</target>
+      </trans-unit>
+      <trans-unit>
+        <source>menu.signout</source>
+        <target>Выйти</target>
+      </trans-unit>
+      <trans-unit>
+        <source>menu.signin</source>
+        <target>Войти</target>
+      </trans-unit>
+      
+      
     </body>
   </file>
 </xliff>

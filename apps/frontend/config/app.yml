@@ -22,3 +22,10 @@ all:
       settings: /user/settings
       
   reply_level_limit: 3
+  
+  .settings: #dot notation to return the following as an array
+    menu:
+      - homepage
+      - file
+      - file_new
+    
