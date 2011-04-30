@@ -168,7 +168,11 @@
       <trans-unit>
         <source>File "%%name%%"</source>
         <target>Файл "%%name%%"</target>
-      </trans-unit>      
+      </trans-unit>
+      <trans-unit>
+        <source>File</source>
+        <target>Файл</target>
+      </trans-unit> 
       <trans-unit>
         <source>Files list</source>
         <target>Мои файлы</target>
@@ -176,6 +180,10 @@
       <trans-unit>
         <source>New File</source>
         <target>Загрузить файл</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Edit File "%%name%%"</source>
+        <target>Редактировать файл "%%name%%"</target>
       </trans-unit>
       <trans-unit>
         <source>View comments</source>
@@ -191,13 +199,22 @@
       </trans-unit>
       <trans-unit>
         <source>Is public</source>
-        <target>Опубликованный?</target>
+        <target>Опубликован?</target>
       </trans-unit>
       
       <trans-unit>
         <source>Upload date</source>
         <target>Дата загрузки</target>
       </trans-unit>
+      <trans-unit>
+        <source>Required.</source>
+        <target>Поле не заполнено</target>
+      </trans-unit>
+      <trans-unit>
+        <source>No one has commented here yet.</source>
+        <target>Здесь пока ещё никто не оставил комментарий. Будь первым!</target>
+      </trans-unit>
+      
     </body>
   </file>
 </xliff>

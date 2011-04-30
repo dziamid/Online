@@ -22,7 +22,7 @@ class fileActions extends autoFileActions
     $comment->File = $this->file;
     $this->form = new CommentForm($comment);
   }
-  protected function processForm(sfWebRequest $request, sfForm $form)
+  protected function processCommentForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
@@ -31,7 +31,7 @@ class fileActions extends autoFileActions
       
       $file = $obj instanceof File ? $obj : $obj->getFile();
 
-      $this->redirect('file_show', $file);
+      $this->redirect('file', $file);
     }
   }
 
@@ -44,7 +44,7 @@ class fileActions extends autoFileActions
     $comment->File = $this->file;
     $this->form = new CommentForm($comment);
 
-    $this->processForm($request, $this->form);
+    $this->processCommentForm($request, $this->form);
 
     $this->setTemplate('show');
   }

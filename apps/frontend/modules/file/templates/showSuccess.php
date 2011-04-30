@@ -3,6 +3,8 @@
 <div id="comments">
   <?php if ($file->hasComments()): ?>
     <h3><?php echo __('Comments on this file') ?></h3>
+  <?php else: ?>
+    <h3><?php echo __('No one has commented here yet.') ?></h3>  
   <?php endif; ?>
   
   <?php include_partial('comment_tree', array('tree'=>$comments)) ?>

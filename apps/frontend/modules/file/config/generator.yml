@@ -23,5 +23,6 @@ generator:
         sort: ['created_at','desc']
       filter:  ~
       form:    ~
-      edit:    ~
+      edit:
+        title: Edit File "%%name%%"
       new:     ~

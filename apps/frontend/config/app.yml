@@ -4,8 +4,8 @@ all:
     remember_key_expiration_age:  1209600
     #remember_cookie_name:         wwwFrontendRememberMe
     #retrieve_by_username_callable: sfGuardUser::getForFrontendAuth
-    #success_signin_url: @localized_homepage
-    #success_signout_url: @localized_homepage
+    success_signin_url: file
+    success_signout_url: homepage
     
   sfApplyPlugin:
     from:
