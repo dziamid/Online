@@ -182,6 +182,10 @@
         <target>Комментарии</target>
       </trans-unit>
       <trans-unit>
+        <source>View comments (%%count%%)</source>
+        <target>Комментарии (%%count%%)</target>
+      </trans-unit>
+      <trans-unit>
         <source>Public files</source>
         <target>Загруженные файлы</target>
       </trans-unit>
