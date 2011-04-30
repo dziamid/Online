@@ -12,5 +12,12 @@ class FileForm extends BaseFileForm
 {
   public function configure()
   {
+    unset($this['user_id']);
+  }
+  
+  public function doSave($conn = null)
+  {
+    $this->getObject()->setUserId(sfContext::getInstance()->getUser()->getId());
+    parent::doSave();
   }
 }

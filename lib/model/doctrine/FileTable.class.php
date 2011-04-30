@@ -16,12 +16,16 @@ class FileTable extends Doctrine_Table
   {
     return Doctrine_Core::getTable('File');
   }
-  
-  //public function getForShow($file_id)
-  //{
-  //  $q = $this->createQuery('f')
-  //    ->where('f.id = ?', $file_id);
-  //  
-  //  return $q->fetchOne();
-  //}
+  /**
+   * Returns a list of files related to sign-in user
+   *
+   */
+  public function getForUser()
+  {
+    $user = sfContext::getInstance()->getUser();
+    $q = $this->createQuery('f')
+      ->where('f.user_id = ?', $user->getId());
+    
+    return $q->execute();
+  }
 }

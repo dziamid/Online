@@ -16,6 +16,7 @@ generator:
       fields:  ~
       list:
         title: Files list
+        table_method: getForUser
       filter:  ~
       form:    ~
       edit:    ~

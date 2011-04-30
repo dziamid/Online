@@ -21,6 +21,7 @@
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardUserProfile $Profile
+ * @property Doctrine_Collection $Files
  * 
  * @method string              getFirstName()             Returns the current record's "first_name" value
  * @method string              getLastName()              Returns the current record's "last_name" value
@@ -38,6 +39,7 @@
  * @method Doctrine_Collection getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey  getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardUserProfile  getProfile()               Returns the current record's "Profile" value
+ * @method Doctrine_Collection getFiles()                 Returns the current record's "Files" collection
  * @method sfGuardUser         setFirstName()             Sets the current record's "first_name" value
  * @method sfGuardUser         setLastName()              Sets the current record's "last_name" value
  * @method sfGuardUser         setEmailAddress()          Sets the current record's "email_address" value
@@ -54,6 +56,7 @@
  * @method sfGuardUser         setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser         setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser         setProfile()               Sets the current record's "Profile" value
+ * @method sfGuardUser         setFiles()                 Sets the current record's "Files" collection
  * 
  * @package    www
  * @subpackage model
@@ -146,6 +149,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasOne('sfGuardUserProfile as Profile', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasMany('File as Files', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 

@@ -13,11 +13,13 @@ abstract class BaseFileFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name' => new sfWidgetFormFilterInput(),
+      'name'    => new sfWidgetFormFilterInput(),
+      'user_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
-      'name' => new sfValidatorPass(array('required' => false)),
+      'name'    => new sfValidatorPass(array('required' => false)),
+      'user_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('User'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('file_filters[%s]');
@@ -37,8 +39,9 @@ abstract class BaseFileFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'   => 'Number',
-      'name' => 'Text',
+      'id'      => 'Number',
+      'name'    => 'Text',
+      'user_id' => 'ForeignKey',
     );
   }
 }

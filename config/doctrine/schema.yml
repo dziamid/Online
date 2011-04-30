@@ -1,6 +1,13 @@
 File:
   columns:
     name: string(255)
+    user_id: integer
+  relations:
+    sfGuardUser:
+      alias: User
+      foreignAlias: Files
+      local: user_id
+      foreign: id
     
 Comment:
   actAs:
