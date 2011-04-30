@@ -12,7 +12,7 @@ class FileForm extends BaseFileForm
 {
   public function configure()
   {
-    unset($this['user_id']);
+    $this->useFields(array('name', 'is_public'));
   }
   
   public function doSave($conn = null)

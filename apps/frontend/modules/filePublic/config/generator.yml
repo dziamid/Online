@@ -15,7 +15,7 @@ generator:
       actions: ~
       fields:  ~
       list:
-        display: [name]
+        display: [name, created_at]
       filter:  ~
       form:    ~
       edit:    ~

@@ -7,17 +7,20 @@
  * 
  * @property string $name
  * @property integer $user_id
+ * @property boolean $is_public
  * @property sfGuardUser $User
  * @property Doctrine_Collection $Comments
  * 
- * @method string              getName()     Returns the current record's "name" value
- * @method integer             getUserId()   Returns the current record's "user_id" value
- * @method sfGuardUser         getUser()     Returns the current record's "User" value
- * @method Doctrine_Collection getComments() Returns the current record's "Comments" collection
- * @method File                setName()     Sets the current record's "name" value
- * @method File                setUserId()   Sets the current record's "user_id" value
- * @method File                setUser()     Sets the current record's "User" value
- * @method File                setComments() Sets the current record's "Comments" collection
+ * @method string              getName()      Returns the current record's "name" value
+ * @method integer             getUserId()    Returns the current record's "user_id" value
+ * @method boolean             getIsPublic()  Returns the current record's "is_public" value
+ * @method sfGuardUser         getUser()      Returns the current record's "User" value
+ * @method Doctrine_Collection getComments()  Returns the current record's "Comments" collection
+ * @method File                setName()      Sets the current record's "name" value
+ * @method File                setUserId()    Sets the current record's "user_id" value
+ * @method File                setIsPublic()  Sets the current record's "is_public" value
+ * @method File                setUser()      Sets the current record's "User" value
+ * @method File                setComments()  Sets the current record's "Comments" collection
  * 
  * @package    www
  * @subpackage model
@@ -36,6 +39,11 @@ abstract class BaseFile extends sfDoctrineRecord
         $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
              ));
+        $this->hasColumn('is_public', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => true,
+             ));
     }
 
     public function setUp()
@@ -43,10 +51,14 @@ abstract class BaseFile extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('sfGuardUser as User', array(
              'local' => 'user_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
 
         $this->hasMany('Comment as Comments', array(
              'local' => 'id',
              'foreign' => 'file_id'));
+
+        $timestampable0 = new Doctrine_Template_Timestampable();
+        $this->actAs($timestampable0);
     }
 }

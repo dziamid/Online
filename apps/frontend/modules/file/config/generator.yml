@@ -17,6 +17,7 @@ generator:
       list:
         title: Files list
         table_method: getForUser
+        display: [name, is_public, created_at]
       filter:  ~
       form:    ~
       edit:    ~

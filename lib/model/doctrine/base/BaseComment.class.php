@@ -55,11 +55,14 @@ abstract class BaseComment extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('File', array(
              'local' => 'file_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
 
         $nestedset0 = new Doctrine_Template_NestedSet(array(
              'hasManyRoots' => true,
              ));
+        $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($nestedset0);
+        $this->actAs($timestampable0);
     }
 }
