@@ -34,6 +34,7 @@ abstract class BaseFile extends sfDoctrineRecord
         $this->setTableName('file');
         $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
+             'notnull' => true,
              'length' => 255,
              ));
         $this->hasColumn('user_id', 'integer', null, array(

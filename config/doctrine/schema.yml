@@ -2,7 +2,9 @@ File:
   actAs:
     Timestampable: ~
   columns:
-    name: string(255)
+    name:
+      type: string(255)
+      notnull: true
     user_id: integer
     is_public:
       type: boolean
