@@ -1,15 +1,17 @@
-comment:
-  class: sfDoctrineRouteCollection
+file_show:
+  url:  /file/:id
   options:
-    module: comment
-    model: Comment
-    
+    module: file
+    action: show
 file:
   class: sfDoctrineRouteCollection
   options:
     module: file
     model: File
-    object_actions: {comment: post}
+    object_actions:
+      comment: post
+    with_wildcard_routes: true
+    
 
 #sfDoctrineGuardPlugin
 sf_guard_signin:

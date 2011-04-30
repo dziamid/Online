@@ -32,6 +32,15 @@ body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-s
 #sf_admin_container label {
   width: 14em;
 }
+#sf_admin_container td {
+  padding: 5px;
+}
+#sf_admin_container th {
+  padding: 5px;
+}
+#sf_admin_container ul li.sf_admin_action_show a {
+  background: url("../images/comments.png") no-repeat scroll 0 0 transparent;
+}
 
 /* layout */
 
@@ -88,18 +97,6 @@ body {
   font-style: normal;
   text-transform: uppercase;
   line-height: 32px;
-}
-
-#content td,
-#content th,
-#content li
-{
-  padding: 5px;
-}
-
-#content p
-{
-  margin: 5px;
 }
 
 #signin input[type=text],

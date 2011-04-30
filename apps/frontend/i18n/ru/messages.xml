@@ -177,7 +177,10 @@
         <source>New file</source>
         <target>Загрузить файл</target>
       </trans-unit>
-      
+      <trans-unit>
+        <source>View comments</source>
+        <target>Комментарии</target>
+      </trans-unit>      
     </body>
   </file>
 </xliff>
