@@ -12,6 +12,19 @@ class FileForm extends BaseFileForm
 {
   public function configure()
   {
+    $this->setWidget('name', new sfWidgetFormInputFileEditable(array(
+      'file_src' => '/uploads/' . $this->getObject()->getName(),
+      'edit_mode' => false,
+      'with_delete' => false,
+    )));
+    
+    $this->setValidator('name', new sfValidatorFile(array(
+      'path' => sfConfig::get('sf_upload_dir'),
+      'required' => false
+    )));
+    
+    $this->setValidator('attachment_delete', new sfValidatorPass());
+    
     $this->useFields(array('name', 'is_public'));
   }
   

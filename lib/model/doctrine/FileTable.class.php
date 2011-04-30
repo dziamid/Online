@@ -26,6 +26,17 @@ class FileTable extends Doctrine_Table
     $q = $this->createQuery('f')
       ->where('f.user_id = ?', $user->getId());
     
-    return $q->execute();
+    return $q;
+  }
+  /**
+   * Returns a list of files related to sign-in user
+   *
+   */
+  public function getForPublic()
+  {
+    $q = $this->createQuery('f')
+      ->where('f.is_public = ?', true);
+    
+    return $q;
   }
 }

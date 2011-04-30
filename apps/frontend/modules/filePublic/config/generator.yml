@@ -13,9 +13,13 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+        created_at: {label: Upload date }
       list:
-        display: [name, created_at]
+        table_method: getForPublic
+        display: [_name, created_at]
+        max_per_page: 25
+        sort: ['created_at','desc']
       filter:  ~
       form:    ~
       edit:    ~

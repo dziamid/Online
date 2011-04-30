@@ -12,4 +12,23 @@
  */
 class File extends BaseFile
 {
+  /**
+  * Generate filename for uploaded files
+  *
+  */
+  public function generateNameFilename(sfValidatedFile $file)
+  {
+    return $file->getOriginalName();
+  }
+  /**
+   * Unlink related file when deleting a record
+   *
+   */
+  public function delete(Doctrine_Connection $conn = null)
+  {
+    $path = sfConfig::get('sf_upload_dir') . '/' . $this->getName();
+    @unlink($path);
+    return parent::delete($conn);
+  }
+
 }

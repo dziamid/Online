@@ -49,7 +49,7 @@ a {
   outline: none;
 }
 
-body {
+html, body {
   font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
   background-color:#DFEEF4;
   min-width: 600px;
@@ -99,6 +99,10 @@ body {
   line-height: 32px;
 }
 
+#signin td,
+#signin th {
+  padding: 4px;
+}
 #signin input[type=text],
 #signin input[type=password]
 {

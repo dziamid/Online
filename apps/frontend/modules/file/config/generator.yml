@@ -13,11 +13,14 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+        created_at: {label: Upload date }
       list:
         title: Files list
         table_method: getForUser
-        display: [name, is_public, created_at]
+        display: [_name, is_public, created_at]
+        max_per_page: 25
+        sort: ['created_at','desc']
       filter:  ~
       form:    ~
       edit:    ~

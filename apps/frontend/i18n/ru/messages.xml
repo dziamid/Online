@@ -174,13 +174,26 @@
         <target>Мои файлы</target>
       </trans-unit>      
       <trans-unit>
-        <source>New file</source>
+        <source>New File</source>
         <target>Загрузить файл</target>
       </trans-unit>
       <trans-unit>
         <source>View comments</source>
         <target>Комментарии</target>
-      </trans-unit>      
+      </trans-unit>
+      <trans-unit>
+        <source>Public files</source>
+        <target>Загруженные файлы</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Is public</source>
+        <target>Опубликованный?</target>
+      </trans-unit>
+      
+      <trans-unit>
+        <source>Upload date</source>
+        <target>Дата загрузки</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
