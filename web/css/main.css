@@ -129,6 +129,9 @@ html, body {
   color: #176F94;
 }
 
+ul.error_list {
+  color: red;
+}
 /* comments */
 
 a, span.link
@@ -145,19 +148,19 @@ a:hover, span.link:hover {
 #comments {
   background-color: #F2F2F2;
   padding: 20px 14px;
-  width: 400px;
+  width: 600px;
 }
 #comments .node .tree {
   padding-left: 20px;
 }
 #comments  h3 {
   color: #000000;
-  font-size: 1.4em;
+  font-size: 1.2em;
   padding: 0 0 7px;
 }
 #comments h4 {
   float: left;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -171,7 +174,7 @@ a:hover, span.link:hover {
 #comments .comment .actions {
   display: inline-block;
   float: right;
-  font-size: 1.1em;
+  font-size: 1em;
   color: #FF9E9E;
 }
 
@@ -187,5 +190,18 @@ a:hover, span.link:hover {
   width: 100%;
 }
 #comments form input[type=text] {
-  width: 100%;
+  width: 200px;
+  padding: 2px;
+}
+
+/* homepage */
+.sf_admin_list_td_name {
+  min-width: 200px;
+}
+.sf_admin_list_td_created_at {
+  min-width: 200px;
+}
+.sf_admin_list_td_name a {
+  background: url("../images/page.png") no-repeat scroll 0 0 transparent;
+  padding-left: 20px;
 }

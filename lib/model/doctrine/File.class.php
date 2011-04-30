@@ -30,5 +30,15 @@ class File extends BaseFile
     @unlink($path);
     return parent::delete($conn);
   }
+  
+  /**
+   * Checks if file has comment relations
+   * 
+   * @return boolean
+   */
+  public function hasComments()
+  {
+    return $this->getComments()->count() !== 0;
+  }
 
 }
