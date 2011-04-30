@@ -1,48 +1,88 @@
 sfGuardUser:
-  User_super:
-    email_address:  super@gmail.com
-    username:       super
+  -
+    id: 1
+    email_address:  demo@gmail.com
+    username:       demo
     password:       demo
     is_super_admin: true
-    first_name:     Super
-    last_name:      Admin
+    first_name:     Onliner
+    last_name:      Test
     Profile:
       id: ~
-  User_admin:
-    email_address:  dziamid@gmail.com
-    username:       dziamid
-    password:       demo
-    is_super_admin: false
-    first_name:     Dziamid
-    last_name:      Zayankouski
-    Groups:         [Group_admin]
-    Profile:
-      id: ~
-  User_client:
-    email_address:  belgim.ovs@gmail.com
-    username:       belgim.ovs
-    first_name:     Belgim
-    last_name:      Ovs
-    password:       demo
-    is_super_admin: false
-    Groups:         [Group_client]
+  -
+    id: 2
+    email_address:  demo2@gmail.com
+    username:       demo2
+    password:       demo2
+    is_super_admin: true
+    first_name:     Onliner2
+    last_name:      Test2
     Profile:
       id: ~
 
-sfGuardGroup:
-  Group_admin:
-    name:           admin
-    description:    Administrators group
-    Permissions:    [Permission_admin]
-  Group_client:
-    name:           client
-    description:    Clients group
-    Permissions:    [Permission_client]
+File:
+  -
+    id: 1
+    name: file_with_comments.jpg
+    is_public: true
+    user_id: 1
+    created_at: '2011-10-10 10:10:10'
+    
+<?php for ($i=2; $i<50; $i++): ?>
+  -
+    id: <?php echo $i . "\n" ?>
+    name: picture.jpg
+    is_public: true
+    user_id: 1
+    
+<?php endfor; ?>
 
-sfGuardPermission:
-  Permission_admin:
-    name:           admin
-    description:    Administrator permission
-  Permission_client:
-    name:           client
-    description:    Clients permission
+Comment:
+  Comment_1:
+    username: demo
+    file_id: '1'
+    root_id: '1'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    lft: '1'
+    rgt: '8'
+    level: '0'
+  Comment_2:
+    username: demo
+    file_id: '1'
+    root_id: '1'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    lft: '2'
+    rgt: '5'
+    level: '1'
+  Comment_3:
+    username: demo
+    file_id: '1'
+    root_id: '1'
+    message: '	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    lft: '6'
+    rgt: '7'
+    level: '1'
+  Comment_4:
+    username: demo
+    file_id: '1'
+    root_id: '1'
+    message: '	Lorem ipsum dolor sit amet, consectetur adipisicing elit..'
+    lft: '3'
+    rgt: '4'
+    level: '2'
+  Comment_5:
+    username: someuser
+    file_id: '1'
+    root_id: '5'
+    message: '	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    lft: '1'
+    rgt: '2'
+    level: '0'
+  Comment_6:
+    username: onemoreuser
+    file_id: '1'
+    root_id: '6'
+    message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+    lft: '1'
+    rgt: '2'
+    level: '0'
