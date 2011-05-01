@@ -31,7 +31,12 @@ class FileForm extends BaseFileForm
   
   public function doSave($conn = null)
   {
-    $this->getObject()->setUserId(sfContext::getInstance()->getUser()->getId());
+    $this->updateObject();
+    $request = sfContext::getInstance()->getRequest();
+    $user = sfContext::getInstance()->getUser();
+    $this->getObject()->setUserId($user->getId());
+    $this->getObject()->setUserBrowser($request->getBrowserName());
+    $this->getObject()->setUserIp($request->getRemoteAddress());
     parent::doSave();
   }
 }

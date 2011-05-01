@@ -63,3 +63,6 @@ all:
     param:
       #set's authentication timeout for 1 day
       timeout:                    86400
+  
+  request:
+    class: myWebRequest

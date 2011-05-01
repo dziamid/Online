@@ -6,6 +6,8 @@ File:
       type: string(255)
       notnull: true
     user_id: integer
+    user_browser: string(255)
+    user_ip: string(255)
     is_public:
       type: boolean
       notnull: true

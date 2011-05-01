@@ -7,20 +7,26 @@
  * 
  * @property string $name
  * @property integer $user_id
+ * @property string $user_browser
+ * @property string $user_ip
  * @property boolean $is_public
  * @property sfGuardUser $User
  * @property Doctrine_Collection $Comments
  * 
- * @method string              getName()      Returns the current record's "name" value
- * @method integer             getUserId()    Returns the current record's "user_id" value
- * @method boolean             getIsPublic()  Returns the current record's "is_public" value
- * @method sfGuardUser         getUser()      Returns the current record's "User" value
- * @method Doctrine_Collection getComments()  Returns the current record's "Comments" collection
- * @method File                setName()      Sets the current record's "name" value
- * @method File                setUserId()    Sets the current record's "user_id" value
- * @method File                setIsPublic()  Sets the current record's "is_public" value
- * @method File                setUser()      Sets the current record's "User" value
- * @method File                setComments()  Sets the current record's "Comments" collection
+ * @method string              getName()         Returns the current record's "name" value
+ * @method integer             getUserId()       Returns the current record's "user_id" value
+ * @method string              getUserBrowser()  Returns the current record's "user_browser" value
+ * @method string              getUserIp()       Returns the current record's "user_ip" value
+ * @method boolean             getIsPublic()     Returns the current record's "is_public" value
+ * @method sfGuardUser         getUser()         Returns the current record's "User" value
+ * @method Doctrine_Collection getComments()     Returns the current record's "Comments" collection
+ * @method File                setName()         Sets the current record's "name" value
+ * @method File                setUserId()       Sets the current record's "user_id" value
+ * @method File                setUserBrowser()  Sets the current record's "user_browser" value
+ * @method File                setUserIp()       Sets the current record's "user_ip" value
+ * @method File                setIsPublic()     Sets the current record's "is_public" value
+ * @method File                setUser()         Sets the current record's "User" value
+ * @method File                setComments()     Sets the current record's "Comments" collection
  * 
  * @package    www
  * @subpackage model
@@ -39,6 +45,14 @@ abstract class BaseFile extends sfDoctrineRecord
              ));
         $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
+             ));
+        $this->hasColumn('user_browser', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             ));
+        $this->hasColumn('user_ip', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
              ));
         $this->hasColumn('is_public', 'boolean', null, array(
              'type' => 'boolean',
