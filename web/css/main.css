@@ -132,6 +132,41 @@ html, body {
 ul.error_list {
   color: red;
 }
+
+/* homepage */
+.sf_admin_list_td_name {
+  min-width: 200px;
+}
+.sf_admin_list_td_created_at {
+  min-width: 200px;
+}
+.sf_admin_list_td_name a,
+.sf_admin_list_td_name span {
+  background: url("../images/page.png") no-repeat scroll 0 0 transparent;
+  padding-left: 20px;
+}
+
+/* file info */
+#file {
+  width: 600px;
+  background-color: #F2F2F2;
+  padding: 20px 14px;
+}
+
+#info {
+  padding-bottom: 20px;
+}
+#info table {
+  width: 100%;
+}
+#info td, #info th {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+#info tr:nth-child(odd) {
+  background-color: white;
+}
+
 /* comments */
 
 a, span.link
@@ -145,11 +180,6 @@ a:hover, span.link:hover {
   text-decoration: underline;
 }
 
-#comments {
-  background-color: #F2F2F2;
-  padding: 20px 14px;
-  width: 600px;
-}
 #comments .node .tree {
   padding-left: 20px;
 }
@@ -194,15 +224,3 @@ a:hover, span.link:hover {
   padding: 2px;
 }
 
-/* homepage */
-.sf_admin_list_td_name {
-  min-width: 200px;
-}
-.sf_admin_list_td_created_at {
-  min-width: 200px;
-}
-.sf_admin_list_td_name a,
-.sf_admin_list_td_name span {
-  background: url("../images/page.png") no-repeat scroll 0 0 transparent;
-  padding-left: 20px;
-}

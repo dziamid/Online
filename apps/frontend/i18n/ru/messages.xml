@@ -215,6 +215,28 @@
         <target>Здесь пока ещё никто не оставил комментарий. Будь первым!</target>
       </trans-unit>
       
+      <!-- file/show     -->
+      
+      <trans-unit>
+        <source>File name</source>
+        <target>Файл</target>
+      </trans-unit>
+      <trans-unit>
+        <source>File owner</source>
+        <target>Загружен пользователем</target>
+      </trans-unit>
+      <trans-unit>
+        <source>File owner browser</source>
+        <target>Браузер пользователя</target>
+      </trans-unit>
+      <trans-unit>
+        <source>File owner IP address</source>
+        <target>IP пользователя</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Uploaded at</source>
+        <target>Дата загрузки</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

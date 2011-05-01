@@ -26,6 +26,8 @@ File:
     name: file_with_comments.jpg
     is_public: true
     user_id: 1
+    user_ip: 127.0.0.1
+    user_browser: Mothilla Firefox
     created_at: '2011-10-10 10:10:10'
     
 <?php for ($i=2; $i<50; $i++): ?>
@@ -34,6 +36,8 @@ File:
     name: picture.jpg
     is_public: true
     user_id: 1
+    user_ip: 127.0.0.1
+    user_browser: Mothilla Firefox
     
 <?php endfor; ?>
 
