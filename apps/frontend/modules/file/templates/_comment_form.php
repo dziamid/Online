@@ -13,6 +13,7 @@
     <?php endif; ?>
   </ul>
   <input type="submit" value="<?php echo __('Save') ?>" />
+  <input type="button" class="cancel" value="<?php echo __('Cancel') ?>" style="display: none;" />
   <?php echo $form->renderHiddenFields() ?>
 </form>
 
