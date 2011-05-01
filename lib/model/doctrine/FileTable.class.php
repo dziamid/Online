@@ -24,6 +24,7 @@ class FileTable extends Doctrine_Table
   {
     $user = sfContext::getInstance()->getUser();
     $q = $this->createQuery('f')
+      ->leftJoin('f.Comments c')
       ->where('f.user_id = ?', $user->getId());
     
     return $q;
@@ -35,6 +36,7 @@ class FileTable extends Doctrine_Table
   public function getForPublic()
   {
     $q = $this->createQuery('f')
+      ->leftJoin('f.Comments c')
       ->where('f.is_public = ?', true);
     
     return $q;
