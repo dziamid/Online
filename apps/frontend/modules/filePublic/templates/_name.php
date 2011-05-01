@@ -1,1 +1,1 @@
-<a href="<?php echo sprintf('/uploads/%s', $file->getName()) ?>" target="_blank"><?php echo $file->getName() ?></a>
+<?php include_partial('file/name', array('file'=>$file)) ?>

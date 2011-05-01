@@ -201,7 +201,8 @@ a:hover, span.link:hover {
 .sf_admin_list_td_created_at {
   min-width: 200px;
 }
-.sf_admin_list_td_name a {
+.sf_admin_list_td_name a,
+.sf_admin_list_td_name span {
   background: url("../images/page.png") no-repeat scroll 0 0 transparent;
   padding-left: 20px;
 }
