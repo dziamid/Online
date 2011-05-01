@@ -10,5 +10,8 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfDoctrinePlugin');
     $this->enablePlugins('sfDoctrineGuardPlugin');
     $this->enablePlugins('sfForkedDoctrineApplyPlugin');
+    
+    $this->dispatcher->connect('command.post_command', array('toolkitEvents', 'commandPostEventHook'));  
+
   }
 }

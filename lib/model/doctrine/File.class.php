@@ -26,7 +26,7 @@ class File extends BaseFile
    */
   public function delete(Doctrine_Connection $conn = null)
   {
-    $path = sfConfig::get('sf_upload_dir') . '/' . $this->getName();
+    $path = sfConfig::get('sf_upload_dir') . '/files/' . $this->getName();
     @unlink($path);
     return parent::delete($conn);
   }
