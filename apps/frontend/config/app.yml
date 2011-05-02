@@ -28,4 +28,5 @@ all:
       - homepage
       - file
       - file_new
-    
+  
+  email: support@onliner.by

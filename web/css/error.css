@@ -1,0 +1,63 @@
+
+
+.sfTMessageInfo
+{
+  margin: 25px;
+}
+
+.sfTMessageInfo dt
+{
+  font-weight: bolder;
+  font-size: 115%;
+  margin: 5px 0;
+}
+
+.sfTMessageInfo dd
+{
+  margin: 0;
+  padding: 0;
+}
+
+.sfTIconList
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sfTIconList li
+{
+  clear: left;
+  line-height: 170%;
+  padding-left: 20px;
+}
+
+.sfTIconList li.sfTDatabaseMessage
+{
+  background: url(../images/icons/db16.png) no-repeat top left;
+}
+
+.sfTIconList li.sfTColorMessage
+{
+  background: url(../images/icons/colour16.png) no-repeat top left;
+}
+
+.sfTIconList li.sfTLinkMessage
+{
+  background: url(../images/icons/linkOut16.png) no-repeat top left;
+}
+
+.sfTIconList li.sfTDirectoryMessage
+{
+  background: url(../images/icons/folder16.png) no-repeat top left;
+}
+
+.sfTIconList li.sfTEditMessage
+{
+  background: url(../images/icons/edit16.png) no-repeat top left;
+}
+
+.sfTIconList li.sfTReloadMessage
+{
+  background: url(../images/icons/reload16.png) no-repeat top left;
+}

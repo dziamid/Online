@@ -19,4 +19,14 @@ class homeActions extends sfActions
   {
 
   }
+  public function executeError404(sfWebRequest $request)
+  {
+    $culture = $this->getUser()->getCulture();
+    $template = sprintf('error404%s', strtolower($culture));
+    $path = sprintf('%s/templates/%sSuccess.php', sfContext::getInstance()->getModuleDirectory(), $template);
+    if (file_exists($path))
+    {
+      $this->setTemplate($template);
+    }
+  }
 }

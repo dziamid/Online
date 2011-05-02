@@ -46,4 +46,5 @@ all:
     default_culture:        ru_RU
     standard_helpers:       [Partial, I18N]
 
-
+    error_404_module:       home
+    error_404_action:       error404
