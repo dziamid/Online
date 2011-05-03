@@ -1,3 +1,6 @@
+<?php use_helper('Date') ?>
+
+
 <h1><?php echo __('File "%%name%%"', array('%%name%%' => $file->getName())) ?></h1>
 
 <div id="file">
@@ -17,7 +20,7 @@
        </tr>
        <tr>
          <th><?php echo __('Uploaded at') ?></th>
-         <td><?php echo $file->getDateTimeObject('created_at')->format('d/m/Y') ?></td>
+         <td><?php echo format_date($file->getCreatedAt(), 'dd MMM yyyy HH:mm') ?></td>
        </tr>
        <tr>
          <th><?php echo __('File owner') ?></th>

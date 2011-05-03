@@ -8,7 +8,7 @@
         <div class="header">
             <a name="<?php echo $node['id'] ?>" href="<?php echo url_for('file_show', $file) ?>#<?php echo $node['id'] ?>">#</a>
             <b><?php echo $node['username'] ?></b> 
-            <span class="date"><?php echo format_date($node['created_at'], 'dd MMMM yyyy HH:mm') ?></span>
+            <span class="date"><?php echo format_date($node['created_at'], 'dd MMM yyyy HH:mm') ?></span>
           <?php if ($level < sfConfig::get('app_reply_level_limit',5)): ?>
             <ul class="actions">
               <li class="reply"><span class='link'><?php echo __('reply') ?></span></li>
