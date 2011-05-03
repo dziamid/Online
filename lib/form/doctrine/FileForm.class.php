@@ -20,10 +20,10 @@ class FileForm extends BaseFileForm
     
     $this->setValidator('name', new sfValidatorFile(array(
       'path' => sfConfig::get('sf_upload_dir').'/files',
-      'required' => true
+      'required' => $this->isNew(),
     )));
     
-    $this->setValidator('attachment_delete', new sfValidatorPass());
+    //$this->setValidator('attachment_delete', new sfValidatorPass());
     
     $this->widgetSchema->setLabel('name', 'File');
     $this->useFields(array('name', 'is_public'));
