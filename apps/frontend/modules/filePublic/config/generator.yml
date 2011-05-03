@@ -14,7 +14,7 @@ generator:
     config:
       actions: ~
       fields:
-        created_at: {label: Upload date }
+        created_at: {label: Upload date, date_format: d MMM yyyy HH:mm }
       list:
         table_method: getForPublic
         display: [_name, created_at]

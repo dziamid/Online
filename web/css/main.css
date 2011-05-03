@@ -188,10 +188,8 @@ a:hover, span.link:hover {
   font-size: 1.2em;
   padding: 0 0 7px;
 }
-#comments h4 {
-  float: left;
-  font-size: 1em;
-  font-weight: bold;
+#comments .header {
+  font-size: 0.9em;
 }
 
 #comments .comment {
@@ -201,7 +199,7 @@ a:hover, span.link:hover {
   position: relative;
 }
 
-#comments .comment .actions {
+#comments .actions {
   display: inline-block;
   float: right;
   font-size: 1em;

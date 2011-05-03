@@ -31,7 +31,7 @@ class fileActions extends autoFileActions
       
       $file = $obj instanceof File ? $obj : $obj->getFile();
 
-      $this->redirect('file', $file);
+      $this->redirect('file_show', $file);
     }
   }
 
