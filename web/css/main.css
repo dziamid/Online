@@ -224,3 +224,14 @@ a:hover, span.link:hover {
   padding: 2px;
 }
 
+#signin {
+  width: 400px;
+  float: left;
+}
+#hint {
+  width: 400px;
+  float: left;
+}
+#hint p {
+  font-style: italic;
+}
