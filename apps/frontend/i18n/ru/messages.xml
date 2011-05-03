@@ -130,6 +130,10 @@
         <target>Отправить</target>
       </trans-unit>
       <trans-unit>
+        <source>Cancel</source>
+        <target>Отмена</target>
+      </trans-unit>
+      <trans-unit>
         <source>Comments on this file</source>
         <target>Комментарии к этому файлу</target>
       </trans-unit>

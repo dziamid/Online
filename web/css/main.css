@@ -233,3 +233,7 @@ a:hover, span.link:hover {
 #hint p {
   font-style: italic;
 }
+
+#comment_form {
+  padding-bottom: 20px;
+}

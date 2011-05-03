@@ -2,6 +2,7 @@
 <?php use_javascripts_for_form($form) ?>
 
 <form id="comment_form" action="<?php echo url_for('file_comment', $file) ?>" method="post">
+  <h3><?php echo __('Your comment') ?></h3>  
   <ul>
     <li>
       <?php echo $form['message']->renderError() ?>

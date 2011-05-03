@@ -45,7 +45,6 @@
     
     <?php include_partial('comment_tree', array('tree'=>$comments, 'file'=>$file)) ?>
     
-    <h3><?php echo __('Your comment') ?></h3>  
     <?php include_partial('comment_form', array('form'=>$form, 'file'=>$file)) ?>  
   </div>  
 
