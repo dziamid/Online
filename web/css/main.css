@@ -55,6 +55,9 @@ html, body {
   min-width: 600px;
 }
 
+input[type=submit], select, input[type=button] {
+  padding: 2px 10px;
+}
 #container {
   margin: 0 auto;
 }
